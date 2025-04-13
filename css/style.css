@@ -10,7 +10,7 @@
 /* 
 Color Scheme: Split complementary
 Primary: #255074
-Secoundry: #f49529
+Secondary: #f49529
 Accent: #e7635a
 Tint: #9DC7EA
 Neutral: #fff
@@ -217,11 +217,12 @@ nav ul li a:hover {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    margin-bottom: 3em;
+
 }
 
 .home article:not(:last-child) {
     border-bottom: solid var(--pri) .08em;
+    margin-bottom: 3em;
 }
 
 .home article h4 {
@@ -235,7 +236,7 @@ nav ul li a:hover {
 }
 
 .home figure img {
-    
+
     border-radius: .5em .5em 0 0;
     margin-bottom: .5em;
 }
@@ -407,13 +408,13 @@ footer {
 
     /* Homapage */
 
-   .home article {
-    display: block;
-   }
+    .home article {
+        display: block;
+    }
 
-   .home article h4 {
-    margin-bottom: 1em;
-   }
+    .home article h4 {
+        margin-bottom: 1em;
+    }
 
     .home article::after {
         content: '';
