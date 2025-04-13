@@ -10,7 +10,7 @@
 /* 
 Color Scheme: Split complementary
 Primary: #255074
-Secondary: #f49529
+Secoundry: #f49529
 Accent: #e7635a
 Tint: #9DC7EA
 Neutral: #fff
@@ -560,9 +560,16 @@ footer {
 
     /* PORTFOLIO */
 
+    .portitle {
+        text-align: left;
+        margin: 1em 0;
+    }
+    
+
     .port {
         gap: 3em;
     }
+
 
     .port figure {
         flex: 0 0 calc(33.333% - 2em);
