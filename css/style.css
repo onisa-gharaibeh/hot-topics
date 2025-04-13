@@ -1,0 +1,598 @@
+/* ------- Fonts */
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orelega+One&display=swap');
+
+/*  ------- Vairables */
+
+/* 
+Color Scheme: Split complementary
+Primary: #255074
+Secoundry: #f49529
+Accent: #e7635a
+Tint: #9DC7EA
+Neutral: #fff
+*/
+
+:root {
+    --pri: #255074;
+    --sec: #f49529;
+    --acc: #e7635a;
+    --shp: #9DC7EA;
+    --whi: white;
+
+
+    /* 
+    Prof: You need to use serif/sans-serif Google font pair. Serif font is for headings and sans-serif font is for body text. Fall-back font is going to be default serif/sans-serif font. 
+    https://www.fontpair.co/pairings/orelega-one-montserrat
+    */
+    --hdfnt: "Orelega One", "Bree Serif", Georgia, "Times New Roman", serif;
+    --bdfnt: "Montserrat", utile, "Raleway", sans-serif;
+
+    /* Prof: Line-height is between 1.4 and 1.6. */
+    --lnhgt: 1.4rem;
+    /* Prof: Mobile View: 0.75rem */
+    --bdsze: 0.75rem;
+}
+
+/* defaults */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bdfnt);
+    font-size: var(--bdsze);
+    font-weight: 500;
+    color: var(--pri);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: var(--lnhgt);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--hdfnt);
+
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    /* color: var(--acc); */
+    color: var(--pri);
+}
+
+a:hover {
+    color: var(--acc);
+}
+
+i {
+    font-size: 1.8em;
+}
+
+b {
+    font-weight: 800;
+}
+
+svg {
+    overflow: visible;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.wrapper {
+    width: 100%;
+    margin: auto;
+    padding: 1em;
+}
+
+/* HEADER */
+
+header {
+    color: var(--whi);
+    width: 100%;
+    background-color: var(--pri);
+}
+
+.inheader {
+
+    text-align: center;
+    padding: 1em;
+
+    display: grid;
+    grid-template-areas:
+        'logo'
+        'tagline'
+        'nav';
+
+
+    align-items: center;
+    gap: 1em;
+}
+
+.headernav {
+    display: contents;
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.logo img {
+    width: 100%;
+    height: 8vh;
+    transition: all .4s;
+}
+
+.logo img:hover {
+    transform: rotate(5deg);
+}
+
+nav {
+    width: 100%;
+    grid-area: nav;
+}
+
+nav ul {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+nav ul li {
+    display: block;
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    border-radius: .5em;
+    color: var(--pri);
+    font-weight: 800;
+    background-color: var(--shp);
+    transition: all .4s;
+}
+
+nav ul li a:hover {
+    color: var(--pri);
+    background-color: var(--sec);
+}
+
+.masthead {
+    grid-area: tagline;
+    margin: auto;
+    max-width: 80%;
+}
+
+
+/* MAIN HOME */
+.home h2 {
+    text-align: center;
+    margin: 1em;
+}
+
+.home article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 3em;
+}
+
+.home article:not(:last-child) {
+    border-bottom: solid var(--pri) .08em;
+}
+
+.home article h4 {
+    text-align: center;
+}
+
+.home figure {
+    background-color: var(--shp);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.home figure img {
+    
+    border-radius: .5em .5em 0 0;
+    margin-bottom: .5em;
+}
+
+.home figcaption {
+    text-align: center;
+    /* margin: 1em 0; */
+}
+
+.home article p {
+    margin-bottom: 1em;
+}
+
+.source {
+    color: var(--acc)
+}
+
+/* MAIN PORTFOIO */
+
+.portitle {
+    text-align: center;
+    margin: 1em;
+}
+
+.port {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.port figure {
+    background-color: var(--shp);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.port figure img {
+    border-radius: .5em .5em 0 0;
+    margin-bottom: .5em;
+}
+
+.port figure figcaption a {
+    border-radius: 0 0 .4em .4em;
+    display: block;
+    padding: .3em;
+}
+
+.port figure figcaption a:hover {
+    color: var(--whi);
+    background-color: var(--acc);
+}
+
+
+
+/* FOOTER */
+
+footer {
+    color: var(--whi);
+    background-color: var(--pri);
+    width: 100%;
+}
+
+.infooter {
+    padding: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.infooter ul {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.infooter ul li a i {
+    color: var(--shp);
+    transition: all .5s;
+}
+
+.infooter ul li a i:hover {
+    color: var(--sec);
+    transform: scale(1.1) rotate(8deg);
+}
+
+/* Prof: 35rem < Tablet View < 60rem */
+
+@media only screen and (min-width: 35rem) {
+
+    :root {
+        /* Prof: Line-height is between 1.4 and 1.6. */
+        --lnhgt: 1.5rem;
+        /* Prof: Tablet View: 1rem */
+        --bdsze: 1rem;
+    }
+
+    h1 {
+        font-size: 2.6rem
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    .wrapper {
+        padding: 2em;
+    }
+
+
+    .inheader {
+        display: block;
+        padding: 0;
+    }
+
+    .headernav {
+        width: 100%;
+        padding: 2em;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .masthead {
+        width: 100%;
+        max-width: 100%;
+        height: 20vh;
+        padding: 2em;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Masthead Background */
+        background-image: url(../img/hero-img.JPG);
+        background-blend-mode: overlay;
+        background-color: rgba(247, 90, 237, 0.3);
+        background-size: 100%;
+        background-position: center;
+    }
+
+    .masthead h1 {
+        text-shadow: .1em .1em .1em rgba(82, 16, 115, 0.5);
+    }
+
+    /* MAIN */
+
+    /* Homapage */
+
+   .home article {
+    display: block;
+   }
+
+   .home article h4 {
+    margin-bottom: 1em;
+   }
+
+    .home article::after {
+        content: '';
+        display: block;
+        clear: both;
+        margin-bottom: 1em;
+    }
+
+    .home article figure {
+        float: left;
+        max-width: 40%;
+        margin-right: 2em;
+    }
+
+    .home article figure img {
+        display: block;
+        margin-right: 1em;
+    }
+
+    .home figcaption {
+        text-align: left;
+    }
+
+
+
+    /* Portfolio */
+    .port {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2em;
+    }
+
+    .port figure {
+        display: block;
+        flex: 0 0 calc(50% - 1em);
+    }
+
+    .infooter ul {
+        max-width: 40vw;
+    }
+
+}
+
+/* Prof: Desktop View > 80rem */
+
+@media only screen and (min-width: 80rem) {
+
+    /* DEFAULTS */
+
+    :root {
+        /* Prof: Line-height is between 1.4 and 1.6. */
+        --lnhgt: 1.6rem;
+        /* Prof: Desktop View: 1.25rem */
+        --bdsze: 1.25rem;
+    }
+
+    body {
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    h6 {
+        font-size: 1.2rem;
+    }
+
+    .wrapper {
+        margin: auto;
+        max-width: 80vw;
+    }
+
+    /* HEADER */
+
+    .headernav {
+        padding: 2em;
+        flex-direction: row;
+        gap: 3em;
+    }
+
+    .logo img {
+        height: 10vh;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        gap: 1em;
+    }
+
+    nav ul li {
+        width: 20%;
+    }
+
+    .masthead {
+        justify-content: left;
+        padding: 2em 11%;
+    }
+
+    .masthead h1 {
+        text-align: left;
+    }
+
+    /* MAIN */
+
+    /* HOMEPAGE */
+
+    .home h2 {
+        text-align: left;
+        margin: 1em 0;
+    }
+
+    .home figure {
+        width: 20%;
+        margin-right: 3em;
+    }
+
+    .home p {
+        float: right;
+        width: calc(80% - 3em);
+    }
+
+    .home article h4 {
+        text-align: left;
+    }
+
+    /* PORTFOLIO */
+
+    .port {
+        gap: 3em;
+    }
+
+    .port figure {
+        flex: 0 0 calc(33.333% - 2em);
+    }
+
+    /* FOOTER */
+
+    .infooter {
+        text-align: left;
+        padding: 2em;
+
+        display: grid;
+        justify-content: stretch;
+        grid-template-areas:
+            'info icons'
+            'rights rights';
+    }
+
+    .infooter ul {
+        max-width: 60%;
+        gap: 1em;
+        grid-area: icons;
+        justify-self: end;
+    }
+
+    .info {
+        grid-area: info;
+    }
+
+    .rights {
+        text-align: center;
+        grid-area: rights;
+    }
+}
